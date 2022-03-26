@@ -1,0 +1,30 @@
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+        <title>IBERIA | Register</title>
+    </head>
+    <body>
+        <div class="login-page">
+            <div class="form">
+                <form action="{{ url_for('register') }}" method="POST" class="register-form">
+                    {{ form.hidden_tag() }}
+                    {{ wtf.form_field(form.email) }}
+                    {{ wtf.form_field(form.password) }}
+                    {{ wtf.form_field(form.repeat_password) }}
+                    <input type="submit" value="register">
+                    <p class="message">Already registered? <a href="{{ url_for('login') }}">Sign In</a></p>
+                </form>
+            </div>
+          </div>
+
+
+    </body>
+</html>
+
