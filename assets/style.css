@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+.header{
+    background-color: #fcd100;
+    color: #D7192D;
+}
+
+body{
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+
+.logout {
+    background-color: #D7192D;
+    box-shadow: 0 5px 0 darkred;
+    color: white;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 1%;
+  }
+  
+  .logout:hover {
+    background-color: #D7192D;
+  }
+  
+  .logout:active {
+    box-shadow: #fcd100;
+    top: 5px;
+  }
+  

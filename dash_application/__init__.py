@@ -121,7 +121,7 @@ def create_dash_application(flask_app):
         children=[
             html.Div(children=[
                 html.H1("IBERIA DASHBOARD"),
-                html.A(children="Logout", href="/logout")
+                html.A(children="Logout", href="/logout", className="logout")
             ], className="header", style={'display': 'flex', 'justify-content': ' space-between'}),
             html.Div(children=[
                 dcc.Tabs(id="tabs-styled-with-props",vertical=True, value='tab-1', children=[
@@ -133,8 +133,8 @@ def create_dash_application(flask_app):
                     dcc.Tab(label='INC per domain', value='tab-6'),
                     ], colors={
                         "border": "white",
-                        "primary": "blue",
-                        "background": "cornflowerblue"
+                        "primary": "#fcd100",
+                        "background": "#D7192D"
                     }),
                 html.Div(children=[
                     html.Div(id='tabs-content-props')
@@ -162,78 +162,7 @@ def create_dash_application(flask_app):
 
 
 
-
-
-    # dash_app.layout = html.Div(
-    #     [
-            
-
-
-    #         html.H1(children=["KPI 2 -  INC closed by month"]),
-    #         html.Div(
-    #             children="""
-    #             Volume of incidences solved by month.
-    #         """
-    #         ),
-    #         dcc.Graph(
-    #             id="Number of Incidences solved by month",
-    #             figure=px.bar(df_kpi2, x="month", y="incidences_code", barmode="group", color='month'),
-    #         ),
-
-
-    #         html.H1(children=["KPI 3 -  INC backlog by month"]),
-    #         html.Div(
-    #             children="""
-    #             Volume of incidences backlog by month.
-    #         """
-    #         ),
-    #         dcc.Graph(
-    #             id="Number of Incidences backlog by month",
-    #             figure=px.scatter(df_kpi3, x="month", y="incidenct_code", color="incidenct_code" )
-                
-    #         ),
-            
-
-
-    #         html.H1(children=["KPI 4 - INC per cause per month"]),
-    #         html.Div(
-    #             children=["""
-    #                 Incident Type Volume by Assigned Organisation.
-    #             """]
-    #         ),
-    #         dcc.Graph(
-    #             id="Priority by assign",
-    #             figure=px.scatter(df_kpi4, x="month", y="inc. type", title="incidences_code", color="incidences_code", height=800)
-    #         ),
-
-
-
-    #         html.H1(children=["KPI 5 -  Number of P1 not meeting SLA"]),
-    #         html.Div(
-    #             children=["""
-    #             Volume of incidences backlog by month.
-    #         """]
-    #         ),
-    #         dcc.Graph(
-    #             id="number of inc backlog by month",
-    #             figure=px.scatter(df_kpi5, x="created_date_time", y="incident_code", color="incident_code" )
-
-    #         ),
-
-
-
-    #         html.H1(children=["KPI 6 -  INC per domain"]),
-    #         html.Div(
-    #             children=["""
-    #             Volume of incidences per domain.
-    #         """]
-    #         ),
-    #         dcc.Graph(
-    #             id="number of incidences per domain ",
-    #             figure=px.scatter(df_kpi6, x="month", y="domain_group", color="priority", height=1000 )
-    #         )
-    #     ]
-  #
+   
 
 
 
